@@ -24,7 +24,7 @@ while True:
         print(position)
 
         while True:
-            endimg = pgi.locateCenterOnScreen('end.png')
+            endimg = pgi.locateCenterOnScreen('end.png', confidence = 0.7)
 
             if keyboard.is_pressed('F4'): #F4 중지
                 print('중지됨 / 다시시작 F4')
@@ -32,12 +32,21 @@ while True:
             else:
                 if endimg == None:
                     print('번역중...')
-                    pgi.press('pgdn')
+                    pgi.press('pgdn') 
+                                        #해당 이미지 위치에 커서놓기
                     time.sleep(1)
                     pgi.rightClick()
                     time.sleep(1)
-                    transimg = pgi.locateCenterOnScreen('transword.png')
+                    transimg = pgi.locateCenterOnScreen('transword.png', confidence = 0.7)
                     pgi.click(transimg)
+                    time.sleep(5)
+                                        #해당 이미지 위치에 커서놓기
+                    pgi.rightClick()
+                    time.sleep(1)
+                    another_name = pgi.locateCenterOnScreen('another_name.png', confidence = 0.7)
+                    pgi.click(another_name)
+                    time.sleep(4)
+                    pgi.press('enter') 
                     time.sleep(3)
                     pgi.moveTo(position)
                 else:
