@@ -5,7 +5,7 @@ import keyboard
 
 position = ""
 
-print('마우스 돌아올 위치지정 "F2" 를 눌려주세요')
+print('마우스 돌아올 위치지정 "F2"')
 while position == "":
     if keyboard.is_pressed('F2'):
         position = pgi.position()
@@ -14,8 +14,8 @@ while position == "":
     else:
         pass
 
-def imgclick(files): #이미지 찾아서 클릭 함수
-    imgfile = pgi.locateCenterOnScreen(files, confidence = 0.7)
+# def imgclick(files): #이미지 찾아서 클릭 함수
+#     imgfile = pgi.locateCenterOnScreen(files, confidence = 0.7)
 
 print('"F3" 번역시작 / "F4" 10초 누르면 중지')
 while True:

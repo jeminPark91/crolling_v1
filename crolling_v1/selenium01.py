@@ -1,7 +1,6 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
-chrome_driver_path = "다운받은 크롬 드라이버의 경로를 넣어주세요"
 naver_url = "https://nid.naver.com/nidlogin.login?mode=form&url=https%3A%2F%2Fwww.naver.com"
 naver_id = "아이디"
 naver_pw = "비번"
